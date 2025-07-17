@@ -1,0 +1,29 @@
+{
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/asd",
+        "root": "apps/asd",
+        "buildLibsFromSource": true,
+        "outputFileTracing": true,
+        "standalone": true
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "options": {
+        "buildTarget": "asd:build",
+        "dev": true
+      }
+    },
+    "preview": {
+      "executor": "@nx/next:server",
+      "options": {
+        "buildTarget": "asd:build",
+        "dev": false
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "installCommand": "npm install --force",
+  "buildCommand": "npx nx build asd",
+  "outputDirectory": "dist/.next",
+  "framework": "nextjs"
+}
